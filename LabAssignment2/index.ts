@@ -9,8 +9,20 @@ class Greeter {
         this.lastName = lastName; 
 }
 showGreeting() {
-    console.log('from showGreeting this.firstName:', this.firstName, 'this.lastName:', this.lastName)
+    const row2 = document.getElementById('r1c2');
+    row2.innerHTML = 'Hello' + this.firstName + '' + this.lastName + '.'
+
+}
+resetGreeting () {
+    const row2 = document.getElementById('r1c2');
+    row2.innerHTML = 'r1c2';
+
 }
 }
-const greeter = new Greeter('Michael', 'Asavamedhi');
-greeter.showGreeting();
+
+// window.onload = () => {
+    const greeter = new Greeter('Michael', 'Asavamedhi');
+    greeter.showGreeting();
+
+// }
+
